@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="eduapp_primary">#FF1B4F9C</color>
+    <color name="eduapp_background">#FFF7F9FC</color>
+    <color name="ic_launcher_background">#FFFFFFFF</color>
+</resources>
