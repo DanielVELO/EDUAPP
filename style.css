@@ -1,0 +1,54 @@
+:root{
+  --azul:#1b4f9c; --azul-osc:#0f2f63; --violeta:#7c4ddb; --verde:#1f9d74; --ambar:#f5a80f;
+  --tinta:#16233b; --gris:#5b6a82; --linea:#dbe3ef; --fondo:#f7f9fc; --blanco:#fff;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --tinta:#e8eef9; --gris:#9fb0cb; --linea:#26365a; --fondo:#0d1730; --blanco:#111d3b; --azul:#6f9dff; --azul-osc:#0d1730; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--tinta);background:var(--fondo);line-height:1.6;font-size:17px}
+a{color:var(--azul)}
+a:focus-visible,.boton:focus-visible{outline:3px solid var(--ambar);outline-offset:3px}
+.contenedor{max-width:1040px;margin:0 auto;padding:0 24px}
+header.top{border-bottom:1px solid var(--linea);background:var(--blanco)}
+header.top .contenedor{display:flex;align-items:center;justify-content:space-between;height:64px}
+.marca{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--tinta);text-decoration:none;letter-spacing:.01em}
+.marca img{width:34px;height:34px}
+nav a{margin-left:22px;color:var(--gris);text-decoration:none;font-size:15px}
+nav a:hover{color:var(--azul)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:72px 0 64px}
+.hero h1{font-family:"IBM Plex Serif",Georgia,serif;font-weight:600;font-size:clamp(34px,5vw,54px);line-height:1.12;margin:0 0 18px;letter-spacing:-.01em}
+.hero p.lead{font-size:19px;color:var(--gris);max-width:34em;margin:0 0 30px}
+.boton{display:inline-block;background:var(--azul);color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:8px}
+.boton:hover{background:var(--azul-osc)}
+.boton.sec{background:transparent;color:var(--azul);border:1.5px solid var(--azul);margin-left:10px}
+.boton.sec:hover{background:var(--azul);color:#fff}
+.nota{font-size:14px;color:var(--gris);margin-top:14px}
+.hero img{width:100%;max-width:380px;justify-self:center;filter:drop-shadow(0 18px 30px rgba(27,79,156,.28))}
+section{padding:56px 0;border-top:1px solid var(--linea)}
+h2{font-family:"IBM Plex Serif",Georgia,serif;font-weight:600;font-size:30px;margin:0 0 10px}
+.intro{color:var(--gris);max-width:40em;margin:0 0 34px}
+.problema{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.funciones{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px;margin:0;padding:0;list-style:none}
+.funciones li{padding:18px 0 18px 18px;border-left:4px solid var(--c);margin-bottom:14px}
+.funciones strong{display:block;font-size:18px}
+.funciones span{color:var(--gris);font-size:16px}
+.pasos{counter-reset:p;list-style:none;margin:0;padding:0;max-width:42em}
+.pasos li{counter-increment:p;position:relative;padding:0 0 22px 52px}
+.pasos li::before{content:counter(p);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--azul);color:#fff;font-weight:700;display:grid;place-items:center;font-size:15px}
+.datos{background:var(--blanco);border:1px solid var(--linea);border-radius:10px;padding:26px 30px}
+.datos ul{margin:8px 0 0;padding-left:20px}
+footer{border-top:1px solid var(--linea);padding:30px 0 44px;color:var(--gris);font-size:15px;background:var(--blanco)}
+footer .contenedor{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.texto-legal{max-width:44em;padding:48px 0}
+.texto-legal h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:36px;margin:0 0 6px}
+.texto-legal h2{font-size:22px;margin:32px 0 8px}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding:44px 0}
+  .hero img{max-width:220px;order:-1}
+  .problema,.funciones{grid-template-columns:1fr}
+  .boton.sec{margin:12px 0 0}
+  nav a{margin-left:14px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
